@@ -1,6 +1,7 @@
 package _04_Thread_Pool.tests;
 
 public class WorkQueue implements Runnable {
+	private ArrayDeque<Job> jobQueue = new ArrayDeque<Job>();
 	private Thread[] threads;
 	private boolean isRunning = true;
 
