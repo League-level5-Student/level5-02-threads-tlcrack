@@ -35,7 +35,9 @@ public class SynchronizedSwimming {
 
 	public static void takeTurn(Swimmer swimmer) {
 		try {
+			synchronized(swimmingPool) {
 			swimLap(swimmer);
+			}
 			Thread.sleep(100);
 		} catch (InterruptedException ignore) {
 		}

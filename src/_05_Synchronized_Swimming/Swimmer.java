@@ -16,6 +16,9 @@ public class Swimmer extends Thread {
 
 	@Override
 	public void run() {
-		// ...
+		for(int i = 0; i < 5; i++) {
+			SynchronizedSwimming.takeTurn(this);
+			//This failed to commit the first time.
+		}
 	}
 }
